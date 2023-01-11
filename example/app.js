@@ -17,5 +17,5 @@ btn.addEventListener('click', () => {
 	});
 });
 
-window.add([img,lbl, btn]);
+window.add([img, lbl, btn]);
 window.open();
