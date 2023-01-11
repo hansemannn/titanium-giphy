@@ -17,6 +17,10 @@ Use the native Giphy iOS- and Android SDK's to select GIFs and display them in y
 
 See the example/app.js for details!
 
+## Note
+
+The default Android ImageView won't show the GIF animation. Check e.g. [av.imageview](https://github.com/AndreaVitale/av.imageview) for GIF support.
+
 ## Author
 
 Hans Knöchel
