@@ -1,6 +1,6 @@
 # Giphy in Titanium
 
-<img src="./.github/giphy-logo.png" />
+<img src="./.github/giphy-sdk.gif" />
 
 Use the native Giphy iOS- and Android SDK's to select GIFs and display them in your app.
 
