@@ -1,0 +1,11 @@
+
+
+plugin 'cocoapods-binary'
+install! 'cocoapods', :integrate_targets => false
+
+use_frameworks!
+platform :ios, '11.0'
+
+target "TiGiph" do
+    pod 'Giphy', '2.2.1', :binary => true
+end
