@@ -10,15 +10,14 @@
 package ti.giphy
 
 import androidx.appcompat.app.AppCompatActivity
-
 import com.giphy.sdk.core.models.Media
 import com.giphy.sdk.ui.GPHContentType
+import com.giphy.sdk.ui.GPHSettings
 import com.giphy.sdk.ui.Giphy
 import com.giphy.sdk.ui.views.GiphyDialogFragment
-
-import org.appcelerator.kroll.KrollModule
 import org.appcelerator.kroll.KrollDict
 import org.appcelerator.kroll.KrollFunction
+import org.appcelerator.kroll.KrollModule
 import org.appcelerator.kroll.annotations.Kroll
 import org.appcelerator.titanium.TiApplication
 
@@ -31,13 +30,15 @@ class TitaniumGiphyModule: KrollModule() {
 	fun initialize(params: KrollDict) {
 		Giphy.configure(TiApplication.getAppCurrentActivity(), params.getString("apiKey"))
 	}
-	
+
 	@Kroll.method
 	fun showGIFDialog(params: KrollDict) {
 		val callback = params["callback"] as KrollFunction
 		val activity = TiApplication.getAppCurrentActivity() as AppCompatActivity
 
-		val dialog = GiphyDialogFragment.newInstance()
+		val gphSettings = GPHSettings(enableEdgeToEdge = true)
+
+		val dialog = GiphyDialogFragment.newInstance(gphSettings)
 		dialog.gifSelectionListener = object: GiphyDialogFragment.GifSelectionListener {
 			override fun didSearchTerm(term: String) {
 

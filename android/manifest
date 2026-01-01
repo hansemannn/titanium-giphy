@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0.0
+version: 1.1.0
 apiversion: 4
 architectures: arm64-v8a armeabi-v7a x86 x86_64
 description: titanium-giphy
@@ -15,4 +15,4 @@ name: titanium-giphy
 moduleid: ti.giphy
 guid: e85a05bb-b3dd-47f8-90da-74c63d9ab478
 platform: android
-minsdk: 11.0.0
+minsdk: 12.7.0
