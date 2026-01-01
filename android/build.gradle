@@ -1,4 +1,4 @@
 
 dependencies {
-	implementation 'com.giphy.sdk:ui:2.3.0'
+	implementation 'com.giphy.sdk:ui:2.4.0'
 }
